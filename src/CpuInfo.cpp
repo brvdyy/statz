@@ -2,11 +2,25 @@
 
 #include "../include/CpuInfo.hpp"
 
-void CpuInfo::setMHz()
+void CpuInfo::setCurrentMhz()
 {
     std::string data = Command::execute("lscpu | grep 'CPU MHz'");
     data.erase(0, 33);
-    m_MHz = std::stof(data, NULL);
+    m_CurrentMhz = std::stof(data, NULL);
+}
+
+void CpuInfo::setMinMhz()
+{
+    std::string data = Command::execute("lscpu | grep 'CPU min MHz'");
+    data.erase(0, 29);
+    m_MinMhz = std::stof(data, NULL);
+}
+
+void CpuInfo::setMaxMhz()
+{
+    std::string data = Command::execute("lscpu | grep 'CPU max MHz'");
+    data.erase(0, 29);
+    m_MaxMhz = std::stof(data, NULL);
 }
 
 void CpuInfo::setUtilization()
@@ -15,9 +29,19 @@ void CpuInfo::setUtilization()
     m_Utilization = std::stof(data, NULL);
 }
 
-float CpuInfo::getMHz()
+float CpuInfo::getCurrentMhz()
 {
-    return m_MHz;
+    return m_CurrentMhz;
+}
+
+float CpuInfo::getMinMhz()
+{
+    return m_MinMhz;
+}
+
+float CpuInfo::getMaxMhz()
+{
+    return m_MaxMhz;
 }
 
 float CpuInfo::getUtilization()

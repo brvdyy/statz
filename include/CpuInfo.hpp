@@ -8,13 +8,19 @@ class CpuInfo
 {
     private:
         std::string m_lscpu_info{""};
-        float m_MHz{ 0.0 };
+        float m_CurrentMhz{ 0.0 };
+        float m_MinMhz{ 0.0 };
+        float m_MaxMhz{ 0.0 };
         float m_Utilization{ 0.0 };
 
     public:
-        void setMHz();
+        void setCurrentMhz();
+        void setMinMhz();
+        void setMaxMhz();
         void setUtilization();
 
-        float getMHz();
+        float getCurrentMhz();
+        float getMinMhz();
+        float getMaxMhz();
         float getUtilization();
 };
