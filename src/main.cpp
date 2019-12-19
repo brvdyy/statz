@@ -10,7 +10,9 @@ int main()
     while(true)
     {
         ci.setMHz();
+        ci.setUtilization();
         std::cout << ci.getMHz() << std::endl;
+        std::cout << ci.getUtilization() << std::endl;
         sleep(1);
     }
 
