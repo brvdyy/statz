@@ -1,6 +1,14 @@
 # statz
 
-Foobar is a Python library for dealing with word pluralization.
+statz is a utility written in c++ to view system statistics on your computer
+
+### To-Do List 
+
+- [x] CPU Info
+- [ ] Memory Usage Info
+- [ ] Networking Info
+- [ ] Disk Usage
+- [ ] Info on Processes?
 
 ## Installation
  
