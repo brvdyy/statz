@@ -24,7 +24,7 @@ $ make
 ## Usage
 
 ```sh
-$ cd build/
+$ cd bin/
 $ main
 ```
 
