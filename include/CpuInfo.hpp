@@ -12,15 +12,12 @@ class CpuInfo
         float m_MinMhz{ 0.0 };
         float m_MaxMhz{ 0.0 };
         float m_Utilization{ 0.0 };
+        float m_temp{ 0.0 };
 
     public:
-        void setCurrentMhz();
-        void setMinMhz();
-        void setMaxMhz();
-        void setUtilization();
-
         float getCurrentMhz();
         float getMinMhz();
         float getMaxMhz();
         float getUtilization();
+        float getTemp();
 };

@@ -8,21 +8,40 @@
 int main()
 {
     CpuInfo ci;
-    ci.setMinMhz();
-    ci.setMaxMhz();
+    float cur_mhz{};
+    float min_mhz{};
+    float max_mhz{};
+    float util{};
+    float temp{};
+
     while(true)
     {
-        ci.setCurrentMhz();
-        ci.setUtilization();
-        //std::system("clear");
+        cur_mhz = ci.getCurrentMhz();
+        min_mhz = ci.getMinMhz();
+        max_mhz = ci.getMaxMhz();
+        util = ci.getUtilization();
+        temp = ci.getTemp();
+        
         std::cout << "\033[2J\033[1;1H";
-        std::cout << "Current Mhz: " << ci.getCurrentMhz() << "\n";
-        std::cout << "Minimum Mhz: " << ci.getMinMhz() << "\n";
-        std::cout << "Maximum Mhz: " << ci.getMaxMhz() << "\n";
-        std::cout << "Current CPU Utilization: " << ci.getUtilization() << "%\n";
+        std::cout << "             _        _       \n" 
+                     "         ___| |_ __ _| |_ ____\n"
+                     "        / __| __/ _` | __|_  /\n"
+                     "        \\__ \\ || (_| | |_ / / \n"
+                     "        |___/\\__\\__,_|\\__/___|\n\n";
+
+                      
+        std::cout << "Current Mhz:                   " << cur_mhz << "\n";
+        std::cout << "Minimum Mhz:                   " << min_mhz << "\n";
+        std::cout << "Maximum Mhz:                   " << max_mhz << "\n";
+        std::cout << "Current CPU Utilization:       " << util << "%\n";
+        std::cout << "Current CPU Temp:              " << temp << " c\n";
         sleep(1);
     }
 
     return 0; 
 }
+
+
+
+
 
