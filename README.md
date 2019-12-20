@@ -21,6 +21,12 @@ $ git clone https://github.com/brvdyy/statz
 $ make 
 ```
 
+## Usage
+
+```sh
+$ cd build/
+$ main
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
