@@ -30,11 +30,11 @@ int main()
                      "        |___/\\__\\__,_|\\__/___|\n\n";
 
                       
-        std::cout << "Current Mhz:                   " << cur_mhz << "\n";
-        std::cout << "Minimum Mhz:                   " << min_mhz << "\n";
-        std::cout << "Maximum Mhz:                   " << max_mhz << "\n";
-        std::cout << "Current CPU Utilization:       " << util << "%\n";
-        std::cout << "Current CPU Temp:              " << temp << " c\n";
+        std::cout << "Current Mhz:                " << cur_mhz << "\n";
+        std::cout << "Minimum Mhz:                " << min_mhz << "\n";
+        std::cout << "Maximum Mhz:                " << max_mhz << "\n";
+        std::cout << "Current CPU Utilization:    " << util << "%\n";
+        std::cout << "Current CPU Temp:           " << temp << " c\n";
         sleep(1);
     }
 
