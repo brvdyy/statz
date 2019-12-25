@@ -21,6 +21,8 @@ $ git clone https://github.com/brvdyy/statz
 $ make 
 ```
 
+There is also a `build.sh` file in the main directory used to streamline the build process and place statz into your bin folder.
+
 ## Usage
 
 ```sh
