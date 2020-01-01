@@ -22,7 +22,7 @@ int main()
         util = ci.getUtilization();
         temp = ci.getTemp();
         
-        std::cout << "\033[2J\033[1;1H";
+        //std::cout << "\033[2J\033[1;1H";
         std::cout << "             _        _       \n" 
                      "         ___| |_ __ _| |_ ____\n"
                      "        / __| __/ _` | __|_  /\n"
@@ -35,6 +35,9 @@ int main()
         std::cout << "Maximum Mhz:                " << max_mhz << "\n";
         std::cout << "Current CPU Utilization:    " << util << "%\n";
         std::cout << "Current CPU Temp:           " << temp << " c\n";
+
+        for (int i = 0; i < 11; i++)
+            std::cout << "\033[A";
         sleep(1);
     }
 
