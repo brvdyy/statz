@@ -14,6 +14,7 @@ int main()
     float util{};
     float temp{};
 
+    std::cout << "\033[2J\033[1;1H";
     while(true)
     {
         cur_mhz = ci.getCurrentMhz();
@@ -22,7 +23,6 @@ int main()
         util = ci.getUtilization();
         temp = ci.getTemp();
         
-        //std::cout << "\033[2J\033[1;1H";
         std::cout << "             _        _       \n" 
                      "         ___| |_ __ _| |_ ____\n"
                      "        / __| __/ _` | __|_  /\n"
