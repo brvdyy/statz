@@ -15,8 +15,6 @@ statz is a utility written in c++ to view system statistics on your computer
 Clone the repo then build the project
 
 ```sh
-$ mkdir statz 
-$ cd statz 
 $ git clone https://github.com/brvdyy/statz 
 $ make 
 ```
